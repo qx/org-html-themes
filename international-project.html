@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-08-31 Wed 15:28 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>项目计划书(初稿)</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="欧阳庆轩" />
+<meta  name="description" content="Org-HTML export made simple."
+ />
+<meta  name="keywords" content="org-mode, export, html, theme, style, css, js, bigblow" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+<script src="styles/jquery.min.js"></script>
+<script src="styles/bootstrap.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">项目计划书(初稿)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline45">1. 互联网人才扶贫计划</a>
+<ul>
+<li><a href="#orgheadline10">1.1. 目前市场上问题</a>
+<ul>
+<li><a href="#orgheadline1">经济</a></li>
+<li><a href="#orgheadline2">人才仍然稀缺</a></li>
+<li><a href="#orgheadline3">一线城市发展的瓶颈</a></li>
+<li><a href="#orgheadline4">昂贵低效的脱产培训:</a></li>
+<li><a href="#orgheadline5">肤浅的线上培训:</a></li>
+<li><a href="#orgheadline6">各种途径培训价格比较</a></li>
+<li><a href="#orgheadline7"><span class="todo TODO">TODO</span> 线下的机会</a></li>
+<li><a href="#orgheadline8">线上的机会</a></li>
+<li><a href="#orgheadline9"><span class="todo TODO">TODO</span> 可能存在的优势</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline16">1.2. 解决方案</a>
+<ul>
+<li><a href="#orgheadline12">线上</a>
+<ul>
+<li><a href="#orgheadline11">差异化竞争</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline13">线下</a>
+<ul>
+<li><a href="#orgheadline14"><span class="todo TODO">TODO</span> 利用本地尚无有效的竞争对手</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline15">优秀学员的价值二次开发</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline20">1.3. 目标用户</a>
+<ul>
+<li><a href="#orgheadline17">年龄 22-30 左右</a></li>
+<li><a href="#orgheadline18">大中专院校计算机相关专业</a></li>
+<li><a href="#orgheadline19">有一定基础的想转行人员</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline24">1.4. 市场容量</a>
+<ul>
+<li><a href="#orgheadline21">线下, 省内</a></li>
+<li><a href="#orgheadline22">线上</a></li>
+<li><a href="#orgheadline23">种子用户</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline31">1.5. 竞争对手</a>
+<ul>
+<li><a href="#orgheadline28"><span class="todo TODO">TODO</span> 线下,需要调查</a>
+<ul>
+<li><a href="#orgheadline25">达内</a></li>
+<li><a href="#orgheadline26">传智播客</a></li>
+<li><a href="#orgheadline27">北大青鸟</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline30"><span class="todo TODO">TODO</span> 线上,需要进一步调查,目前只有极客学院比较大</a>
+<ul>
+<li><a href="#orgheadline29">极客学院</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline35">1.6. 核心竞争力</a>
+<ul>
+<li><a href="#orgheadline32">教育优势</a></li>
+<li><a href="#orgheadline33">时间/时机即核心</a></li>
+<li><a href="#orgheadline34">人才优势</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline38">1.7. 盈利模式</a>
+<ul>
+<li><a href="#orgheadline36">线下,线上收费相结合</a></li>
+<li><a href="#orgheadline37">中期计划带领优秀学员接项目工程</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline42">1.8. 团队介绍</a>
+<ul>
+<li><a href="#orgheadline39">欧阳:</a></li>
+<li><a href="#orgheadline40"><span class="todo TODO">TODO</span> 张颍川</a></li>
+<li><a href="#orgheadline41">市场</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline43">1.9. 投资人</a></li>
+<li><a href="#orgheadline44">1.10. </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline45" class="outline-2">
+<h2 id="orgheadline45"><span class="section-number-2">1</span> 互联网人才扶贫计划</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">1.1</span> 目前市场上问题</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-orgheadline1" class="outline-4">
+<h4 id="orgheadline1">经济</h4>
+<div class="outline-text-4" id="text-orgheadline1">
+<p>
+经济环境下行,实体产业下滑,此消彼长,互联网经济必然会迎来更多从业者
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline2" class="outline-4">
+<h4 id="orgheadline2">人才仍然稀缺</h4>
+<div class="outline-text-4" id="text-orgheadline2">
+<p>
+未来对互联网技术人才仍然有较大需求量,但是学校教授的知识过于陈旧,不符合市场需要,于是诞生了各种各样的培训机构,江西是个 it 技术落后的省份,这点可以从互联网行业招聘人数上看出来,学校教育出来的学生素质比较低,在市场上缺乏竞争力.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-4">
+<h4 id="orgheadline3">一线城市发展的瓶颈</h4>
+<div class="outline-text-4" id="text-orgheadline3">
+<p>
+由于近几年一线城市生活成本陡增,不论从个人还是从公司角度来说,都期望有更好的选择,未来 5 年内,企业回流现象会进一步明显,伴随着这样的发展趋势,现在正是引领时代和区域发展最好的时间和机遇
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-4">
+<h4 id="orgheadline4">昂贵低效的脱产培训:</h4>
+<div class="outline-text-4" id="text-orgheadline4">
+<p>
+目前互联网人才培训市场收费昂贵,  每门课基本就业班在 15000 以上,可以学习的课程包括 javaEE,android,前端/移动开发,ios
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline5" class="outline-4">
+<h4 id="orgheadline5">肤浅的线上培训:</h4>
+<div class="outline-text-4" id="text-orgheadline5">
+<p>
+目前线上最大的 it 培训网站是极客学院,课程肤浅,很难满足工作的要求.而且知识较为落后,例如 ruby on rails 目前尚无哪家培训机构培训此技术,但 rails 非常适合快速开发项目
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6">各种途径培训价格比较</h4>
+<div class="outline-text-4" id="text-orgheadline6">
+<p>
+脱产培训价格较贵,加上自己脱产时间,成本估算 5 万左右线上培训太肤浅,知识难以系统化,离掌握就业技能仍然不够,知识相对落后,自身价值无法突出,兴趣可以,但是想凭借这个拿高薪还远远不够
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="todo TODO">TODO</span> 线下的机会</h4>
+<div class="outline-text-4" id="text-orgheadline7">
+<p>
+目前江西还没有像样的 it 培训机构
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8">线上的机会</h4>
+<div class="outline-text-4" id="text-orgheadline8">
+<p>
+ruby on rails web 开发目前还没有人做.但是他作为 web 开发的优势毋庸置疑
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="todo TODO">TODO</span> 可能存在的优势</h4>
+<div class="outline-text-4" id="text-orgheadline9">
+<p>
+某些地方政府会有高新人才培养计划补助,有助于我们降低成本,提高收益南昌有没有需要调查一下
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">1.2</span> 解决方案</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12">线上</h4>
+<div class="outline-text-4" id="text-orgheadline12">
+</div><div id="outline-container-orgheadline11" class="outline-5">
+<h5 id="orgheadline11">差异化竞争</h5>
+<div class="outline-text-5" id="text-orgheadline11">
+<p>
+加强互动竞争产品比对,取长补短突出差异宣传
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline13" class="outline-4">
+<h4 id="orgheadline13">线下</h4>
+<div class="outline-text-4" id="text-orgheadline13">
+<p>
+借助本地资源的力量
+</p>
+</div>
+<div id="outline-container-orgheadline14" class="outline-5">
+<h5 id="orgheadline14"><span class="todo TODO">TODO</span> 利用本地尚无有效的竞争对手</h5>
+</div>
+</div>
+<div id="outline-container-orgheadline15" class="outline-4">
+<h4 id="orgheadline15">优秀学员的价值二次开发</h4>
+<div class="outline-text-4" id="text-orgheadline15">
+<p>
+优秀学员吸纳为铁粉,给予一定的返利优惠机制,作为种子用户培养
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline20" class="outline-3">
+<h3 id="orgheadline20"><span class="section-number-3">1.3</span> 目标用户</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-orgheadline17" class="outline-4">
+<h4 id="orgheadline17">年龄 22-30 左右</h4>
+</div>
+<div id="outline-container-orgheadline18" class="outline-4">
+<h4 id="orgheadline18">大中专院校计算机相关专业</h4>
+</div>
+<div id="outline-container-orgheadline19" class="outline-4">
+<h4 id="orgheadline19">有一定基础的想转行人员</h4>
+</div>
+</div>
+<div id="outline-container-orgheadline24" class="outline-3">
+<h3 id="orgheadline24"><span class="section-number-3">1.4</span> 市场容量</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-orgheadline21" class="outline-4">
+<h4 id="orgheadline21">线下, 省内</h4>
+<div class="outline-text-4" id="text-orgheadline21">
+<p>
+南昌大学一所学校的计算机相关专业人数大约在 4000 左右,在加上南航,师大,财大,理工,东华等等,保守估计 10000 人,1%的转化率来算最少有 100 人一年.如果每个费用在 1 万,
+一年线下收入保守在 100 万,这里转化率和基础人数都相当保守.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline22" class="outline-4">
+<h4 id="orgheadline22">线上</h4>
+<div class="outline-text-4" id="text-orgheadline22">
+<p>
+保守估计每年新增的计算机行业从业人数大约为 500000,1/3 左右的意向会从事我们所教学内容的方向发展,基数大约为 20 万.
+这里不分梯度估算. 0.1%转化率,200 人/1 万, 一年的营收最少在 200 万
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline23" class="outline-4">
+<h4 id="orgheadline23">种子用户</h4>
+<div class="outline-text-4" id="text-orgheadline23">
+<p>
+当种子用户发展起来后,可以第二年扩展省外线下市场,进一步直接提高转化率
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline31" class="outline-3">
+<h3 id="orgheadline31"><span class="section-number-3">1.5</span> 竞争对手</h3>
+<div class="outline-text-3" id="text-1-5">
+</div><div id="outline-container-orgheadline28" class="outline-4">
+<h4 id="orgheadline28"><span class="todo TODO">TODO</span> 线下,需要调查</h4>
+<div class="outline-text-4" id="text-orgheadline28">
+</div><div id="outline-container-orgheadline25" class="outline-5">
+<h5 id="orgheadline25">达内</h5>
+</div>
+<div id="outline-container-orgheadline26" class="outline-5">
+<h5 id="orgheadline26">传智播客</h5>
+</div>
+<div id="outline-container-orgheadline27" class="outline-5">
+<h5 id="orgheadline27">北大青鸟</h5>
+</div>
+</div>
+<div id="outline-container-orgheadline30" class="outline-4">
+<h4 id="orgheadline30"><span class="todo TODO">TODO</span> 线上,需要进一步调查,目前只有极客学院比较大</h4>
+<div class="outline-text-4" id="text-orgheadline30">
+</div><div id="outline-container-orgheadline29" class="outline-5">
+<h5 id="orgheadline29">极客学院</h5>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35"><span class="section-number-3">1.6</span> 核心竞争力</h3>
+<div class="outline-text-3" id="text-1-6">
+</div><div id="outline-container-orgheadline32" class="outline-4">
+<h4 id="orgheadline32">教育优势</h4>
+<div class="outline-text-4" id="text-orgheadline32">
+<p>
+教育有别于传统的商业盈利模式,注重教育培训中的人文精神,有利于企业的长期发展,目前市面上所有的培训机构都没有好好利用这点
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline33" class="outline-4">
+<h4 id="orgheadline33">时间/时机即核心</h4>
+<div class="outline-text-4" id="text-orgheadline33">
+<p>
+所谓核心竞争力,大多数时候只是时机问题,如果抓住了时代发展的机遇,也就成功了一半
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline34" class="outline-4">
+<h4 id="orgheadline34">人才优势</h4>
+<div class="outline-text-4" id="text-orgheadline34">
+<p>
+我们有着长期从事互联网相关行业的知识储备,坚持把握最前沿的信息.非常擅长且适合帮助学员快速获得工作能力.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline38" class="outline-3">
+<h3 id="orgheadline38"><span class="section-number-3">1.7</span> 盈利模式</h3>
+<div class="outline-text-3" id="text-1-7">
+</div><div id="outline-container-orgheadline36" class="outline-4">
+<h4 id="orgheadline36">线下,线上收费相结合</h4>
+</div>
+<div id="outline-container-orgheadline37" class="outline-4">
+<h4 id="orgheadline37">中期计划带领优秀学员接项目工程</h4>
+</div>
+</div>
+<div id="outline-container-orgheadline42" class="outline-3">
+<h3 id="orgheadline42"><span class="section-number-3">1.8</span> 团队介绍</h3>
+<div class="outline-text-3" id="text-1-8">
+</div><div id="outline-container-orgheadline39" class="outline-4">
+<h4 id="orgheadline39">欧阳:</h4>
+<div class="outline-text-4" id="text-orgheadline39">
+<p>
+具有 10 余年丰富的 it 从业经验,曾就职于联想,中软等公司,参与多个大型互联网项目,移动,服务器,web 前端均有丰富的项目经验
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline40" class="outline-4">
+<h4 id="orgheadline40"><span class="todo TODO">TODO</span> 张颍川</h4>
+<div class="outline-text-4" id="text-orgheadline40">
+<p>
+自己吹
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline41" class="outline-4">
+<h4 id="orgheadline41">市场</h4>
+<div class="outline-text-4" id="text-orgheadline41">
+<p>
+考察中
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline43" class="outline-3">
+<h3 id="orgheadline43"><span class="section-number-3">1.9</span> 投资人</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+目前没有
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline44" class="outline-3">
+<h3 id="orgheadline44"><span class="section-number-3">1.10</span> </h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: 欧阳庆轩</p>
+<p class="date">Created: 2016-08-31 Wed 15:28</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
