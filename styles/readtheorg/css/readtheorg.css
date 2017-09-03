@@ -37,7 +37,7 @@ h6{
 }
 
 h4,h5,h6{
-    color:#2980B9;
+    color: #715ab1;
     font-weight:300;
 }
 
@@ -429,7 +429,7 @@ table tr:nth-child(2n) td{
     }
 
     #toggle-sidebar {
-        background-color: #2980B9;
+        background-color: #715ab1;
         display: block;
         margin-bottom: 1.6em;
         padding: 0.6em;
@@ -785,7 +785,7 @@ hr{
 
 #table-of-contents h2{
     z-index:200;
-    background-color:#2980B9;
+    background-color: #715ab1;
     text-align:center;
     padding:0.809em;
     display:block;
@@ -891,7 +891,7 @@ footer p{
 #postamble .date {
     font-size: 90%;
     margin-bottom: 0px;
-    color: #27AE60;
+    color: #666;
 }
 
 #postamble .creator,#postamble .validation {
